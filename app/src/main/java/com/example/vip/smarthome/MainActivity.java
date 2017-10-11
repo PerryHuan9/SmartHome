@@ -16,9 +16,11 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -222,6 +224,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.go_out:
+                        isGoOutModeSend = true;
+                        Toast.makeText(MainActivity.this, "已关闭所有用电器", Toast.LENGTH_LONG).show();
+                        break;
+                    case R.id.save_power:
+                        isPowerSavingModeSend = true;
+                        break;
+                    case R.id.smart_mode:
+                        isSmartModeSend = true;
+                        break;
+                }
+                Log.w("tag", "click menu");
+               
                 drawerLayout.closeDrawers();
                 return true;
             }
@@ -253,6 +269,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.smarthome_main);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+//        ActionBar actionBar = getSupportActionBar();
+//        if (actionBar != null) {
+//            actionBar.setDisplayHomeAsUpEnabled(true);
+//        }
         getSupportActionBar().hide();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager
                 .LayoutParams.FLAG_FULLSCREEN);
@@ -264,23 +284,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.w("tag", "已进入主程序onCreate");
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.go_out:
-                isGoOutModeSend = true;
-                Toast.makeText(this, "已关闭所有用电器", Toast.LENGTH_LONG).show();
-                break;
-            case R.id.save_power:
-                isPowerSavingModeSend = true;
-                break;
-            case R.id.smart_mode:
-                isSmartModeSend = true;
-                break;
-        }
-        Log.w("tag", "click menu");
-        return super.onOptionsItemSelected(item);
-    }
 
     @Override
     public void onClick(View v) {

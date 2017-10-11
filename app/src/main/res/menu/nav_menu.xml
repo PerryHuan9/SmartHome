@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
-        <item
-            android:icon="@drawable/goout"
-            android:id="@+id/go_out"
-            android:title="离家模式"/>
+        
         <item
             android:icon="@drawable/recycle24"
             android:id="@+id/save_power"
+            android:title="节能模式"/>
+        <item
+            android:icon="@drawable/goout"
+            android:id="@+id/go_out"
             android:title="离家模式"/>
         <item
             android:icon="@drawable/smart"
