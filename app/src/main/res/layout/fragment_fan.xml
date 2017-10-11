@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/content_back">
+
+
+    <RadioGroup
+        android:id="@+id/fan_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/curtain1"
+        android:layout_alignRight="@id/curtain1"
+        android:layout_below="@+id/curtain1"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/fan_quick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="块"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/fan_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="中"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/fan_slow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="慢"
+            android:textSize="20sp"/>
+        <RadioButton
+            android:id="@+id/fan_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="关"
+            android:textSize="20sp"/>
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/fan_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/curtain1"
+        android:layout_alignRight="@id/curtain1"
+        android:layout_below="@id/fan_speed"
+        android:layout_marginTop="15dp"
+        android:text="2017-5-26 23:25"
+        android:hint="2017-12-24 23:55"
+        android:inputType="datetime"
+        android:maxLength="17"
+        android:textSize="20sp"/>
+
+
+    <Button
+        android:id="@+id/fan_set_time"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="设定定时"
+        android:textSize="20sp"
+        android:layout_below="@+id/fan_time"
+        android:layout_alignStart="@+id/fan_time"
+        android:layout_alignRight="@id/curtain1"/>
+
+    <TextView
+        android:id="@+id/curtain1"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:background="#7bd68d4d"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="大厅电风扇"
+        android:textSize="25sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

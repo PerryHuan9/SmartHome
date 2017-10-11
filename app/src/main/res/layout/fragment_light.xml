@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/content_back">
+
+
+    <TextView
+        android:id="@+id/curtain1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/fan2"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="58dp"
+        android:background="#7bd68d4d"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="大厅主光源"
+        android:textSize="25sp"/>
+
+    <RadioGroup
+        android:id="@+id/hall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/curtain1"
+        android:layout_alignRight="@id/curtain1"
+        android:layout_below="@+id/curtain1"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/hall_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="开"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/hall_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="关"
+            android:textSize="20sp"/>
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/hall_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/curtain1"
+        android:layout_alignRight="@id/curtain1"
+        android:layout_below="@id/hall"
+        android:hint="2017-12-24 23:55"
+        android:inputType="datetime"
+        android:maxLength="17"
+        android:text="2017-5-26 23:25"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/fan2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="35dp"
+        android:layout_toEndOf="@+id/hall"
+        android:background="#7bd68d4d"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="卧室主光源"
+        android:textSize="25sp"/>
+
+    <RadioGroup
+        android:id="@+id/bedroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/fan2"
+        android:layout_below="@+id/fan2"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/bedroom_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/bedroom_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:text="关"
+            android:textSize="20sp"/>
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/bedroom_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/fan2"
+        android:layout_alignRight="@id/fan2"
+        android:layout_below="@id/hall"
+        android:hint="2017-12-24 23:55"
+        android:inputType="datetime"
+        android:maxLength="17"
+        android:text="2017-5-26 23:25"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/lig3"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/hall_time"
+        android:layout_below="@+id/hall_time"
+        android:layout_marginTop="16dp"
+        android:background="#7bd68d4d"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="床头灯亮度"
+        android:textSize="25sp"/>
+
+    <SeekBar
+        android:id="@+id/bed"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/curtain1"
+        android:layout_alignRight="@id/curtain1"
+        android:layout_below="@id/lig3"
+        android:layout_marginTop="5dp"/>
+
+    <EditText
+        android:id="@+id/bed_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/lig3"
+        android:layout_alignLeft="@id/curtain1"
+        android:layout_below="@id/bed"
+        android:layout_marginTop="5dp"
+        android:hint="2017-12-24 23:55"
+        android:inputType="datetime"
+        android:maxLength="17"
+        android:text="2017-5-26 23:25"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/set_time"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/lig3"
+        android:layout_alignLeft="@id/fan2"
+        android:layout_alignTop="@id/lig3"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="设定定时"
+        android:textSize="20sp"/>
+
+
+</RelativeLayout>
